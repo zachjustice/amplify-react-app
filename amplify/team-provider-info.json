@@ -37,5 +37,26 @@
                 "S3Trigger57f19c29": {}
             }
         }
+    },
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-amplify-react-app-prod-160155-authRole",
+            "UnauthRoleArn": "arn:aws:iam::953164654365:role/amplify-amplify-react-app-prod-160155-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::953164654365:role/amplify-amplify-react-app-prod-160155-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-amplify-react-app-prod-160155-deployment",
+            "UnauthRoleName": "amplify-amplify-react-app-prod-160155-unauthRole",
+            "StackName": "amplify-amplify-react-app-prod-160155",
+            "StackId": "arn:aws:cloudformation:us-east-1:953164654365:stack/amplify-amplify-react-app-prod-160155/18fae910-3711-11ea-a692-0a279eeb3bc1",
+            "AmplifyAppId": "d22r7vn6zin3yg"
+        },
+        "categories": {
+            "auth": {
+                "amplifyreactapp885ae33e": {}
+            },
+            "function": {
+                "S3Trigger57f19c29": {}
+            }
+        }
     }
 }
