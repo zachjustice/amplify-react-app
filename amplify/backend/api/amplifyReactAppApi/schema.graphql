@@ -13,6 +13,16 @@ type CommentConnection {
   items: [Comment]
   nextToken: String
 }
+type Post {
+    id: ID!
+    title: String!
+    comments: [Comment] @function(name: "GraphQLResolverFunction")
+}
+type PostComment {
+    postId: ID!
+    content: String
+}
 type Query {
   commentsForTodo(todoId: ID!, limit: Int, nextToken: String): CommentConnection
+  posts: [Post] @function(name: "GraphQLResolverFunction")
 }
