@@ -6,6 +6,13 @@ export const onCreateTodo = `subscription OnCreateTodo {
     id
     name
     description
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
   }
 }
 `;
@@ -14,6 +21,13 @@ export const onUpdateTodo = `subscription OnUpdateTodo {
     id
     name
     description
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
   }
 }
 `;
@@ -22,6 +36,58 @@ export const onDeleteTodo = `subscription OnDeleteTodo {
     id
     name
     description
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const onCreateComment = `subscription OnCreateComment {
+  onCreateComment {
+    id
+    content
+    todo {
+      id
+      name
+      description
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const onUpdateComment = `subscription OnUpdateComment {
+  onUpdateComment {
+    id
+    content
+    todo {
+      id
+      name
+      description
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const onDeleteComment = `subscription OnDeleteComment {
+  onDeleteComment {
+    id
+    content
+    todo {
+      id
+      name
+      description
+      comments {
+        nextToken
+      }
+    }
   }
 }
 `;
