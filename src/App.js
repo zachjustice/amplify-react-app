@@ -64,7 +64,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <p> Pick a file! </p>
+                <p>Pick a file!</p>
                 <input type="file" onChange={this.uploadFile} />
                 <button onClick={this.listQuery}>GraphQL Query</button>
                 <button onClick={this.todoMutation}>GraphQL Mutation</button>t

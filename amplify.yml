@@ -18,7 +18,7 @@ frontend:
         - yarn run build
     test:
       commands:
-        - yarn run unit-tests
+        - CI=true yarn run test
   artifacts:
     baseDirectory: build
     files:

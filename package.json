@@ -18,13 +18,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "echo 'Linting...' && eslint --ignore-path .gitignore . && echo 'Lint complete.'",
-    "format": "yarn --silent lint --fix && echo 'Lint complete.'",
-    "unit-tests": "echo 'running unit tests...' && echo 'test test test' && echo 'all done. great tests, Zach.'",
-    "validate": "yarn -s unit-tests"
+    "format": "yarn --silent lint --fix && echo 'Lint complete.'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn -s validate"
+      "pre-commit": ""
     }
   },
   "eslintConfig": {
