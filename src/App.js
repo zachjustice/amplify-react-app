@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import Amplify, { Analytics, Storage, API, graphqlOperation } from 'aws-amplify';
+import Amplify, { Analytics, API, graphqlOperation,Storage } from 'aws-amplify';
+import { S3Album,withAuthenticator } from 'aws-amplify-react'; // or 'aws-amplify-react-native';
+import React, {Component} from 'react';
+
 import awsconfig from './aws-exports';
-import { withAuthenticator, S3Album } from 'aws-amplify-react'; // or 'aws-amplify-react-native';
+import logo from './logo.svg';
 
 Amplify.configure(awsconfig);
 Storage.configure({ level: 'private'  });
