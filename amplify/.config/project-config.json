@@ -1,4 +1,7 @@
 {
+    "providers": [
+        "awscloudformation"
+    ],
     "projectName": "amplify-react-app",
     "version": "3.0",
     "frontend": "javascript",
@@ -10,8 +13,5 @@
             "BuildCommand": "yarn run build",
             "StartCommand": "yarn run start"
         }
-    },
-    "providers": [
-        "awscloudformation"
-    ]
+    }
 }
