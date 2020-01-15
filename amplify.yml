@@ -7,9 +7,18 @@ backend:
         - amplifyPush --simple
 frontend:
   phases:
+    preBuild:
+      commands:
+        - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+        - yum install -y ./google-chrome-stable_current_*.rpm
+        - yarn install
+        - yarn validate
     build:
       commands:
         - yarn run build
+    test:
+      commands:
+        - yarn run unit-tests
   artifacts:
     baseDirectory: build
     files:
@@ -19,9 +28,7 @@ frontend:
       - node_modules/**/*
 test:
   phases:
-    test:
+    preTest:
       commands:
-        - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-        - yum install -y ./google-chrome-stable_current_*.rpm
-        - yarn install
-        - yarn validate
+        - yarn
+        - echo 'Great job, Zach'
