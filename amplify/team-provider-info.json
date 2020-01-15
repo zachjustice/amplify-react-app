@@ -34,7 +34,8 @@
                 "amplifyreactapp885ae33e": {}
             },
             "function": {
-                "S3Trigger57f19c29": {}
+                "S3Trigger57f19c29": {},
+                "GraphQLResolverFunction": {}
             }
         }
     },
