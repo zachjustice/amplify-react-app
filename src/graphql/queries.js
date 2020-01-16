@@ -16,20 +16,8 @@ export const commentsForTodo = `query CommentsForTodo($todoId: ID!, $limit: Int,
   }
 }
 `;
-export const posts = `query Posts {
-  posts {
-    id
-    title
-    comments {
-      id
-      content
-      todo {
-        id
-        name
-        description
-      }
-    }
-  }
+export const returnEnvironmentSecret = `query ReturnEnvironmentSecret {
+  returnEnvironmentSecret
 }
 `;
 export const getTodo = `query GetTodo($id: ID!) {

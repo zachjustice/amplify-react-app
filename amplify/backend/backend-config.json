@@ -29,11 +29,6 @@
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true
-		},
-		"amplifyreactappeb0bcbd2": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true
 		}
 	},
 	"storage": {
