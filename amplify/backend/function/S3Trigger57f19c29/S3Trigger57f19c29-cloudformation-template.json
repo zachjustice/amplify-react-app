@@ -59,7 +59,7 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-amplify-react-app-featureadd-171457-deployment",
+					"S3Bucket": "amplify-amplify-react-app-dev-155641-deployment",
 					"S3Key": "amplify-builds/S3Trigger57f19c29-44627a5932337a767066-build.zip"
 				}
 			}

@@ -27,5 +27,5 @@ type PostComment {
 type Query {
   commentsForTodo(todoId: ID!, limit: Int, nextToken: String): CommentConnection
   posts: [Post] @function(name: "GraphQLResolverFunction")
-  returnEnvironmentSecret: [String] @function(name: "MyEnvSecretFunction"
+  returnEnvironmentSecret: String @function(name: "MyEnvSecretFunction")
 }
