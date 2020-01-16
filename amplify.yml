@@ -21,16 +21,3 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
-test:
-  phases:
-    preTest:
-      commands:
-        - yarn
-        - echo 'Great job, Zach'
-  artifacts:
-    baseDirectory: '.'
-    files:
-      - 'src/App.js'
-  cache:
-    paths:
-      - node_modules/**/*
