@@ -28,9 +28,9 @@ test:
         - yarn
         - echo 'Great job, Zach'
   artifacts:
-    baseDirectory: build
+    baseDirectory: '.'
     files:
-      - '**/*'
+      - 'src/App.js'
   cache:
     paths:
       - node_modules/**/*
