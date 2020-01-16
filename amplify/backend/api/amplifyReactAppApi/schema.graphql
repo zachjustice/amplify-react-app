@@ -7,6 +7,7 @@ type Todo
   id: ID!
   name: String!
   description: String
+  owner: String
   comments: [Comment] @connection(name: "TodoComments")
 }
 
@@ -23,5 +24,5 @@ type CommentConnection {
 
 type Query {
   commentsForTodo(todoId: ID!, limit: Int, nextToken: String): CommentConnection
-  returnEnvironmentSecret: String @function(name: "MyEnvSecretFunction")
+  getGreeting: String @function(name: "myfunction-${env}")
 }

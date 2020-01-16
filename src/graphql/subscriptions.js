@@ -6,6 +6,7 @@ export const onCreateTodo = `subscription OnCreateTodo($owner: String!) {
     id
     name
     description
+    owner
     comments {
       items {
         id
@@ -21,6 +22,7 @@ export const onUpdateTodo = `subscription OnUpdateTodo($owner: String!) {
     id
     name
     description
+    owner
     comments {
       items {
         id
@@ -36,6 +38,7 @@ export const onDeleteTodo = `subscription OnDeleteTodo($owner: String!) {
     id
     name
     description
+    owner
     comments {
       items {
         id
@@ -54,6 +57,7 @@ export const onCreateComment = `subscription OnCreateComment {
       id
       name
       description
+      owner
       comments {
         nextToken
       }
@@ -69,6 +73,7 @@ export const onUpdateComment = `subscription OnUpdateComment {
       id
       name
       description
+      owner
       comments {
         nextToken
       }
@@ -84,6 +89,7 @@ export const onDeleteComment = `subscription OnDeleteComment {
       id
       name
       description
+      owner
       comments {
         nextToken
       }

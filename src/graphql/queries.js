@@ -10,6 +10,7 @@ export const commentsForTodo = `query CommentsForTodo($todoId: ID!, $limit: Int,
         id
         name
         description
+        owner
       }
     }
     nextToken
@@ -25,6 +26,7 @@ export const getTodo = `query GetTodo($id: ID!) {
     id
     name
     description
+    owner
     comments {
       items {
         id
@@ -45,6 +47,7 @@ export const listTodos = `query ListTodos(
       id
       name
       description
+      owner
       comments {
         nextToken
       }
@@ -61,6 +64,7 @@ export const getComment = `query GetComment($id: ID!) {
       id
       name
       description
+      owner
       comments {
         nextToken
       }
@@ -81,6 +85,7 @@ export const listComments = `query ListComments(
         id
         name
         description
+        owner
       }
     }
     nextToken
