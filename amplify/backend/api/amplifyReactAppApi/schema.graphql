@@ -1,14 +1,21 @@
-type Todo @model {
+type Todo
+ @model
+ @auth(
+    rules: [
+        {allow: owner, ownerField: "owner", operations: [create, update, delete, read]},
+ ]) {
   id: ID!
   name: String!
   description: String
   comments: [Comment] @connection(name: "TodoComments")
 }
+
 type Comment @model {
   id: ID!
   content: String
   todo: Todo @connection(name: "TodoComments")
 }
+
 type CommentConnection {
   items: [Comment]
   nextToken: String
@@ -19,6 +26,7 @@ type Post {
     title: String!
     comments: [Comment] @function(name: "GraphQLResolverFunction")
 }
+
 type PostComment {
     postId: ID!
     content: String
