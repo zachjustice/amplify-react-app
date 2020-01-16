@@ -12,6 +12,7 @@ frontend:
         - CI=true yarn run test
     build:
       commands:
+        - yarn install
         - yarn run build
   artifacts:
     baseDirectory: build
@@ -26,3 +27,10 @@ test:
       commands:
         - yarn
         - echo 'Great job, Zach'
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
