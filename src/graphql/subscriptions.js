@@ -1,12 +1,13 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateTodo = `subscription OnCreateTodo($owner: String!) {
+export const onCreateTodo = `subscription OnCreateTodo($owner: String) {
   onCreateTodo(owner: $owner) {
     id
     name
     description
     owner
+    editors
     comments {
       items {
         id
@@ -17,12 +18,13 @@ export const onCreateTodo = `subscription OnCreateTodo($owner: String!) {
   }
 }
 `;
-export const onUpdateTodo = `subscription OnUpdateTodo($owner: String!) {
-  onUpdateTodo(owner: $owner) {
+export const onUpdateTodo = `subscription OnUpdateTodo($owner: String, $editors: String) {
+  onUpdateTodo(owner: $owner, editors: $editors) {
     id
     name
     description
     owner
+    editors
     comments {
       items {
         id
@@ -33,12 +35,13 @@ export const onUpdateTodo = `subscription OnUpdateTodo($owner: String!) {
   }
 }
 `;
-export const onDeleteTodo = `subscription OnDeleteTodo($owner: String!) {
+export const onDeleteTodo = `subscription OnDeleteTodo($owner: String) {
   onDeleteTodo(owner: $owner) {
     id
     name
     description
     owner
+    editors
     comments {
       items {
         id
@@ -58,6 +61,7 @@ export const onCreateComment = `subscription OnCreateComment {
       name
       description
       owner
+      editors
       comments {
         nextToken
       }
@@ -74,6 +78,7 @@ export const onUpdateComment = `subscription OnUpdateComment {
       name
       description
       owner
+      editors
       comments {
         nextToken
       }
@@ -90,6 +95,7 @@ export const onDeleteComment = `subscription OnDeleteComment {
       name
       description
       owner
+      editors
       comments {
         nextToken
       }

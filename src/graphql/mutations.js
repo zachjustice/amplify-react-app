@@ -10,6 +10,7 @@ export const createTodo = `mutation CreateTodo(
     name
     description
     owner
+    editors
     comments {
       items {
         id
@@ -29,6 +30,7 @@ export const updateTodo = `mutation UpdateTodo(
     name
     description
     owner
+    editors
     comments {
       items {
         id
@@ -48,6 +50,7 @@ export const deleteTodo = `mutation DeleteTodo(
     name
     description
     owner
+    editors
     comments {
       items {
         id
@@ -70,6 +73,7 @@ export const createComment = `mutation CreateComment(
       name
       description
       owner
+      editors
       comments {
         nextToken
       }
@@ -89,6 +93,7 @@ export const updateComment = `mutation UpdateComment(
       name
       description
       owner
+      editors
       comments {
         nextToken
       }
@@ -108,6 +113,7 @@ export const deleteComment = `mutation DeleteComment(
       name
       description
       owner
+      editors
       comments {
         nextToken
       }

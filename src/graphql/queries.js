@@ -11,14 +11,15 @@ export const commentsForTodo = `query CommentsForTodo($todoId: ID!, $limit: Int,
         name
         description
         owner
+        editors
       }
     }
     nextToken
   }
 }
 `;
-export const returnEnvironmentSecret = `query ReturnEnvironmentSecret {
-  returnEnvironmentSecret
+export const getGreeting = `query GetGreeting {
+  getGreeting
 }
 `;
 export const getTodo = `query GetTodo($id: ID!) {
@@ -27,6 +28,7 @@ export const getTodo = `query GetTodo($id: ID!) {
     name
     description
     owner
+    editors
     comments {
       items {
         id
@@ -48,6 +50,7 @@ export const listTodos = `query ListTodos(
       name
       description
       owner
+      editors
       comments {
         nextToken
       }
@@ -65,6 +68,7 @@ export const getComment = `query GetComment($id: ID!) {
       name
       description
       owner
+      editors
       comments {
         nextToken
       }
@@ -86,6 +90,7 @@ export const listComments = `query ListComments(
         name
         description
         owner
+        editors
       }
     }
     nextToken

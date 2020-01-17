@@ -1,14 +1,23 @@
 type Todo
- @model
- @auth(
+@model
+@auth(
     rules: [
-        {allow: owner, ownerField: "owner", operations: [create, update, delete, read]},
- ]) {
-  id: ID!
-  name: String!
-  description: String
-  owner: String
-  comments: [Comment] @connection(name: "TodoComments")
+
+        # Defaults to use the "owner" field.
+        { allow: owner },
+
+        # Authorize the update mutation and both queries. Use `queries: null` to disable auth for queries.
+        { allow: owner, ownerField: "editors", operations: [update,read] },
+
+        # Admin users can access any operation.
+        { allow: groups, groups: ["Admin"] }
+    ]) {
+    id: ID!
+    name: String!
+    description: String
+    owner: String
+    editors: [String]
+    comments: [Comment] @connection(name: "TodoComments")
 }
 
 type Comment @model {
